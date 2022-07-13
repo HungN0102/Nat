@@ -555,7 +555,8 @@ body {
         margin-bottom: 6rem; } }
   @media (max-width: 56.25em) {
     .row {
-      max-width: 50rem; } }
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row::after {
     content: "";
     display: table;
@@ -781,7 +782,7 @@ body {
     @media (max-width: 56.25em) {
       .footer__copyright {
         width: 100%;
-        text-align: center; } }
+        float: none; } }
 
 .section-about {
   background-color: #f7f7f7;
