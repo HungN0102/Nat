@@ -157,6 +157,9 @@ body {
   width: 80%;
   display: block;
   color: inherit; }
+  @media (max-width: 56.25em) {
+    .form__input {
+      width: 100%; } }
   .form__input:focus {
     outline: none;
     box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.15);
@@ -182,6 +185,10 @@ body {
 .form__radio-group {
   width: 49%;
   display: inline-block; }
+  @media (max-width: 56.25em) {
+    .form__radio-group {
+      width: 100%;
+      margin-bottom: 1rem; } }
 
 .form__radio-label {
   font-size: 1.6rem;
@@ -463,6 +470,43 @@ body {
   .card__price-value {
     font-size: 6rem;
     font-weight: 100; }
+  @media (max-width: 56.25em) {
+    .card {
+      height: auto;
+      position: relative;
+      border-radius: 3px;
+      background-color: #fff;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+      .card__side {
+        height: auto;
+        box-shadow: none;
+        position: relative; }
+        .card__side--back {
+          transform: rotateY(0);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); }
+          .card__side--back-1 {
+            background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+          .card__side--back-2 {
+            background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+          .card__side--back-3 {
+            background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+      .card:hover .card__side--front {
+        transform: rotateY(0); }
+      .card__cta {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        text-align: center;
+        padding: 7rem 4rem 4rem 4rem; }
+      .card__price-box {
+        margin-bottom: 3rem; }
+      .card__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase; }
+      .card__price-value {
+        font-size: 6rem; } }
 
 .composition {
   position: relative; }
@@ -540,6 +584,10 @@ body {
   padding: 6rem;
   font-size: 1.6rem;
   transform: skewX(-12deg); }
+  @media (max-width: 56.25em) {
+    .story {
+      width: 100%;
+      transform: none; } }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -551,11 +599,18 @@ body {
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
     backface-visibility: hidden; }
+    @media (max-width: 56.25em) {
+      .story__shape {
+        transform: none;
+        margin-right: 2rem; } }
   .story__img {
     height: 100%;
     transform: translateX(-4rem) scale(1.4); }
   .story__text {
     transform: skewX(12deg); }
+    @media (max-width: 56.25em) {
+      .story__text {
+        transform: none; } }
   .story__caption {
     position: absolute;
     z-index: 1000;
@@ -853,10 +908,26 @@ body {
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 0%), url(../img/nat-10.jpg);
-  background-size: cover;
+  background-size: 100%;
   height: 50rem;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+  @media (max-width: 75em) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 0%), url(../img/nat-10.jpg);
+      background-size: cover; } }
+  @media (max-width: 56.25em) {
+    .book {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%, transparent 0%), url(../img/nat-10.jpg);
+      background-size: cover; } }
   .book__form {
     width: 50%;
     padding: 6rem; }
+    @media (max-width: 75em) {
+      .book__form {
+        width: 65%; } }
+    @media (max-width: 56.25em) {
+      .book__form {
+        width: 100%; } }
+  .book h2 {
+    font-size: 2.2rem; }
